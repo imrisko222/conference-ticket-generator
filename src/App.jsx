@@ -1,6 +1,6 @@
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import Form from "./components/Form";
+import Header from "./components/Header/Header";
+import HeroSection from "./components/HeroSection/HeroSection";
+import Form from "./components/Form/Form";
 import "./App.css";
 
 function App() {

@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './Form.module.css'
 
 const Form = () => {
   return (
-    <form>
+    <form className={styles.formContainer}>
         <label htmlFor="">
 Full Name
         <input type='text'/>
