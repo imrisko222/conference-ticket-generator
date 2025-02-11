@@ -3,3 +3,29 @@
     flex-direction: column;
     color: red;
 }
+
+label {
+    text-align: left;
+    color: #fff;
+font-weight: 300;
+font-family: 'Inconsolata', monospace;
+margin-bottom: 5px;
+}
+
+
+input {
+    border-radius: 7px;
+    padding: 13px 9px;
+    min-width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: beige;
+    margin-bottom: 15px;
+}
+
+button {
+    color: #000;
+    background-color: hsl(7, 88%, 67%);
+    font-family: 'Inconsolata', monospace;
+}

@@ -5,17 +5,17 @@ const Form = () => {
   return (
     <form className={styles.formContainer}>
         <label htmlFor="">
-Full Name
+Full Name</label>
         <input type='text'/>
-        </label>
+        
         <label htmlFor="">
-Email Address
-        <input type='email'/>
-        </label>
+Email Address</label>
+        <input type='email' placeholder='example@email.com'/>
+        
         <label htmlFor="">
-Full Name
-        <input type='email'/>
-        </label>
+Full Name</label>
+        <input type='email' placeholder='@yournick'/>
+        <button type='submit'>Generate My Ticket</button>
 
     </form>
   )
