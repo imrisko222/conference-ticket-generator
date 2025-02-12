@@ -1,0 +1,10 @@
+.heroStyle {
+    font-family: "Inconsolata", monospace;
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 30px;
+}
+
+.heroStyle > p {
+    font-weight: lighter;
+}
