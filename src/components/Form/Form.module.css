@@ -22,6 +22,11 @@ margin-bottom: 8px;
     margin-bottom: 15px;
 }
 
+.inputFileContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .fileStyle {
     background-color: green;
 padding: 50px 20px;
@@ -29,7 +34,13 @@ border-radius: 7px;
 border: 1px dashed rgba(255, 255, 255, 0.3);
 background-color: rgba(255, 255, 255, 0.1);
 margin-bottom: 15px;
+color: #fff;
+font-family: 'Inconsolata', monospace;
+font-size: 10px;
+}
 
+input[type='file'] {
+    display: none;
 }
 
 .buttonSubmit {
