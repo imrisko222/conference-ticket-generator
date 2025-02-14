@@ -1,0 +1,11 @@
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    align-items: center;
+}
+
+.headerContainer > img {
+    width: 20px;
+}
