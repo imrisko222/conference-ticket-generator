@@ -1,0 +1,21 @@
+.heroContainer {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: "Inconsolata", monospace;
+}
+
+.heroContainer > p {
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+.name {
+    background: linear-gradient(to right, #F57261, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mail {
+    color: #F57261;
+}
