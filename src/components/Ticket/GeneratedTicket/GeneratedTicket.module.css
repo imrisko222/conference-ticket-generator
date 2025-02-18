@@ -1,0 +1,30 @@
+.ticketBorder {
+    height: 300px;
+    width: 600px;
+    display: flex;
+}
+
+.partOfTicketOne {
+    width: 85%;
+    height: 100%;
+    border: white 1px solid;
+    border-radius: 8px;
+}
+
+.partOfTicketTwo {
+    width: 5%;
+    height: 100%;
+
+    border: green 1px solid;
+    border-radius: 8px;
+
+}
+
+.partOfTicketThree {
+    width: 10%;
+    height: 100%;
+
+    border: red 1px solid;
+    border-radius: 8px;
+
+}
