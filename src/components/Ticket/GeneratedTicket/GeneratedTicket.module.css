@@ -9,6 +9,20 @@
     height: 100%;
     border: white 1px solid;
     border-radius: 8px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.namedSection {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-height: 50%;
+    margin-left: 15px;
+    margin-top: 15px;
+    color: white;
+    
 }
 
 .partOfTicketTwo {
