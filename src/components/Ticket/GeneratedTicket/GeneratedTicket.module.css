@@ -16,13 +16,35 @@
 
 .namedSection {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
-    max-height: 50%;
-    margin-left: 15px;
-    margin-top: 15px;
+    height: 50%;
+    padding-left: 25px;
+    padding-top: 35px;
     color: white;
-    
+    font-size: 18px;
+    font-family: "Inconsolata", monospace;
+
+    /*nasl riad vym*/
+    border-bottom: 1px solid white;
+}
+
+.namedSection > img {
+    width: 20px;
+}
+
+.avatarSection {
+    display: flex;
+    align-items: center;
+    height: 50%;
+}
+
+.avatarSection > img {
+    border-radius: 8px;
+
+    /* height: 70%; */
+    padding: 25px;
+
 }
 
 .partOfTicketTwo {
