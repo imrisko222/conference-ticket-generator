@@ -10,7 +10,7 @@ function App() {
       {/* <Header />
       <HeroSection />
       <Form /> */}
-<TicketComponent />
+      <TicketComponent />
     </section>
   );
 }

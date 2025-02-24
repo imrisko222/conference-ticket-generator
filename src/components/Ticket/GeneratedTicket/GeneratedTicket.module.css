@@ -37,6 +37,7 @@
     display: flex;
     align-items: center;
     height: 50%;
+    color: white;
 }
 
 .avatarSection > img {
@@ -57,10 +58,23 @@
 }
 
 .partOfTicketThree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     width: 10%;
     height: 100%;
 
     border: red 1px solid;
     border-radius: 8px;
 
+}
+
+.generatedNumber {
+    font-family: 'Inconsolata', monospace;
+    color: #8784A5;
+    -webkit-text-stroke: 0.5px black;
+    writing-mode: vertical-lr;
+
+    /* text-orientation: upright; */
 }
