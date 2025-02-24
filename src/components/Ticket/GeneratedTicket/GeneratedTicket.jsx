@@ -14,6 +14,10 @@ const GeneratedTicket = () => {
     </div>
     <div className={style.avatarSection}>
       <img src={Avatar} alt="Conference attendee’s photo" />
+      <div>
+        <p>Meno</p>
+        <p>odkaz na github</p>
+      </div>
     </div>
   </div>
   <div className={style.partOfTicketTwo}></div>
