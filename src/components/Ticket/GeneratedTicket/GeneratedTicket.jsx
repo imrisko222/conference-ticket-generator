@@ -15,23 +15,29 @@ const GeneratedTicket = () => {
 
   return (
     <div class={style.ticketContainer}>
-      {/* <div className={style.partOfTicketOne}>
-    <div className={style.namedSection}>
-      <img src={Icon} alt="Conference icon" />
-      <p>Coding Conf</p>
-    </div>
-    <div className={style.avatarSection}>
-      <img src={Avatar} alt="Conference attendees photo" />
-      <div>
-        <p>Meno</p>
-        <p>odkaz na github</p>
+      <div className={`${style.box} ${style.itemOne}`}>
+        <div className={style.confSection}>
+          <img src={Icon} alt="Conference icon" />
+          <p>Coding Conf</p>
+        </div>
+        <div className={style.avatarSection}>
+          {/* <img src={Avatar} alt="Conference attendees photo" />
+          <div className={style.informations}>
+            <p>Name</p>
+            <p>Link github</p>
+          </div> */}
+        </div>
       </div>
-    </div>
-  </div>
-  <div className={style.partOfTicketTwo}></div>
-  <div className={style.partOfTicketThree}>
-    <p className={style.generatedNumber}>{ticketNumber}</p>
-  </div> */}
+      <div className={`${style.box} ${style.itemTwo}`}>
+        <img src={Avatar} alt="Conference attendees photo" />
+        <div>
+          <p>Name</p>
+          <p>Link for github</p>
+        </div>
+      </div>
+      <div className={`${style.box} ${style.itemThree}`}>
+        <p className={style.generatedNumber}>{ticketNumber}</p>
+      </div>
       {/* <img src={Ticket} alt="ticket" /> */}
     </div>
   );

@@ -6,30 +6,37 @@
   background-position: top;
   background-repeat: no-repeat;
 
-  /* width: 100%;
-  overflow: hidden; */
+border: 1px green solid;
 
-  /* height: 300px;
-  width: 600px;
-  display: flex; */
+display: grid;
+grid-template-columns: 3fr 1fr; /* Prvý stĺpec 3fr, druhý 1fr */
+    grid-template-rows: 1fr 1fr; /* Dva riadky */
+    gap: 10px; /* Medzera medzi grid prvkami */
+
 }
 
-.ticketContainer > img {
-  max-width: 100%;
-  height: auto;
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid darkblue;
 }
 
-.partOfTicketOne {
-  width: 85%;
+.itemOne {
+    grid-column: 1 / 2; /* Prvý column */
+    grid-row: 1 / 2; /* Prvý row */
+
+
   height: 100%;
-  border: white 1px solid;
+  border: red 1px solid;
   border-radius: 8px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.namedSection {
+.confSection {
   display: flex;
   align-items: flex-start;
   gap: 15px;
@@ -40,11 +47,10 @@
   font-size: 18px;
   font-family: "Inconsolata", monospace;
 
-  /*nasl riad vym*/
   border-bottom: 1px solid white;
 }
 
-.namedSection > img {
+.confSection > img {
   width: 20px;
 }
 
@@ -62,20 +68,20 @@
   padding: 25px;
 }
 
-.partOfTicketTwo {
-  width: 5%;
+.itemTwo {
+    grid-column: 1 / 2; /* Prvý column */
+    grid-row: 2 / 3; /* Druhý row */
+
   height: 100%;
 
   border: green 1px solid;
   border-radius: 8px;
 }
 
-.partOfTicketThree {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 10%;
+.itemThree {
+    grid-column: 2 / 3; /* Druhý column */
+    grid-row: 1 / 3; /* Rozprestrie sa cez oba rows */
+  
   height: 100%;
 
   border: red 1px solid;
@@ -88,5 +94,4 @@
   -webkit-text-stroke: 0.5px black;
   writing-mode: vertical-lr;
 
-  /* text-orientation: upright; */
 }
