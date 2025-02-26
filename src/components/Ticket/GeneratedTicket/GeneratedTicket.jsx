@@ -16,24 +16,18 @@ const GeneratedTicket = () => {
   return (
     <div class={style.ticketContainer}>
       <div className={`${style.box} ${style.itemOne}`}>
-        <div className={style.confSection}>
-          <img src={Icon} alt="Conference icon" />
+        <img src={Icon} alt="Conference icon" />
+        <div className={style.conferenceDetails}>
           <p>Coding Conf</p>
-        </div>
-        <div className={style.avatarSection}>
-          {/* <img src={Avatar} alt="Conference attendees photo" />
-          <div className={style.informations}>
-            <p>Name</p>
-            <p>Link github</p>
-          </div> */}
-        </div>
+          <p>Jan 31, 2025 / Offline</p>
+        </div>        
       </div>
       <div className={`${style.box} ${style.itemTwo}`}>
         <img src={Avatar} alt="Conference attendees photo" />
-        <div>
+         <div className={style.userInfo}>
           <p>Name</p>
           <p>Link for github</p>
-        </div>
+         </div>
       </div>
       <div className={`${style.box} ${style.itemThree}`}>
         <p className={style.generatedNumber}>{ticketNumber}</p>

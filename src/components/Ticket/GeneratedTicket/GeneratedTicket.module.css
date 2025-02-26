@@ -1,20 +1,17 @@
 .ticketContainer {
   width: 100%;
-  height: 100vh;
-  background-image: url("../../../assets/images/ticket_bg.svg");
-  background-size: contain;
-  background-position: top;
-  background-repeat: no-repeat;
-
+  height: 300px;
 border: 1px green solid;
-
 display: grid;
 grid-template-columns: 3fr 1fr; /* Prvý stĺpec 3fr, druhý 1fr */
     grid-template-rows: 1fr 1fr; /* Dva riadky */
-    gap: 10px; /* Medzera medzi grid prvkami */
-
+    grid-column-gap: 20px;
+    overflow-y: hidden;
+    background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.01) 0%,  /* Biela farba s 10% nepriehľadnosťou */
+    rgba(255, 255, 255, 0.25) 80%  /* Biela farba s 30% nepriehľadnosťou */
+);
 }
-
 
 .box {
     display: flex;
@@ -26,56 +23,55 @@ grid-template-columns: 3fr 1fr; /* Prvý stĺpec 3fr, druhý 1fr */
 .itemOne {
     grid-column: 1 / 2; /* Prvý column */
     grid-row: 1 / 2; /* Prvý row */
-
-
-  height: 100%;
+    gap: 16px;
+display: flex;
+justify-content: flex-start;
   border: red 1px solid;
   border-radius: 8px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-.confSection {
+.conferenceDetails {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
   gap: 15px;
-  height: 50%;
-  padding-left: 25px;
-  padding-top: 35px;
+  /* padding-left: 25px;
+  padding-top: 35px; */
   color: white;
   font-size: 18px;
   font-family: "Inconsolata", monospace;
-
-  border-bottom: 1px solid white;
 }
 
-.confSection > img {
-  width: 20px;
-}
-
-.avatarSection {
-  display: flex;
-  align-items: center;
-  height: 50%;
-  color: white;
-}
-
-.avatarSection > img {
-  border-radius: 8px;
-
-  /* height: 70%; */
-  padding: 25px;
+.conferenceDetails > img {
+  width: 40px;
+  height: auto;
 }
 
 .itemTwo {
     grid-column: 1 / 2; /* Prvý column */
     grid-row: 2 / 3; /* Druhý row */
-
-  height: 100%;
-
   border: green 1px solid;
   border-radius: 8px;
+color: white;
+  display: flex;
+  /* align-items: flex-start; */
+  justify-content: flex-start;
+  gap: 16px;
+
+} 
+
+.itemTwo > img {
+  height: auto;
+  max-height: 80px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+
 }
 
 .itemThree {
@@ -95,3 +91,6 @@ grid-template-columns: 3fr 1fr; /* Prvý stĺpec 3fr, druhý 1fr */
   writing-mode: vertical-lr;
 
 }
+
+
+
