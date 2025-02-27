@@ -1,7 +1,9 @@
 .ticketContainer {
   width: 100%;
   height: 300px;
-border: 1px green solid;
+border: 1px solid;
+border-image: linear-gradient(45deg, red, blue) 1;
+border-radius: 8px;
 display: grid;
 grid-template-columns: 3fr 1fr; /* Prvý stĺpec 3fr, druhý 1fr */
     grid-template-rows: 1fr 1fr; /* Dva riadky */
@@ -17,7 +19,7 @@ grid-template-columns: 3fr 1fr; /* Prvý stĺpec 3fr, druhý 1fr */
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid darkblue;
+    /* border: 1px solid darkblue; */
 }
 
 .itemOne {
@@ -26,8 +28,10 @@ grid-template-columns: 3fr 1fr; /* Prvý stĺpec 3fr, druhý 1fr */
     gap: 16px;
 display: flex;
 justify-content: flex-start;
-  border: red 1px solid;
+  /* border: red 1px solid; */
   border-radius: 8px;
+  padding-left: 30px;
+
 }
 
 .conferenceDetails {
@@ -36,11 +40,17 @@ justify-content: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   gap: 15px;
-  /* padding-left: 25px;
-  padding-top: 35px; */
-  color: white;
-  font-size: 18px;
   font-family: "Inconsolata", monospace;
+}
+
+.conferenceDetails p:nth-child(1) {
+  font-size: 26px;
+  color: white;
+}
+
+.conferenceDetails p:nth-child(2) {
+  font-size: 20px;
+  color: #8784a5;
 }
 
 .conferenceDetails > img {
@@ -51,19 +61,20 @@ justify-content: flex-start;
 .itemTwo {
     grid-column: 1 / 2; /* Prvý column */
     grid-row: 2 / 3; /* Druhý row */
-  border: green 1px solid;
+  /* border: green 1px solid; */
   border-radius: 8px;
 color: white;
   display: flex;
-  /* align-items: flex-start; */
   justify-content: flex-start;
   gap: 16px;
-
+padding-left: 30px;
+font-family: 'Inconsolata', monospace;
 } 
 
 .itemTwo > img {
   height: auto;
   max-height: 80px;
+  border-radius: 8px;
 }
 
 .userInfo {
@@ -71,23 +82,40 @@ color: white;
   flex-direction: column;
   /* justify-content: flex-start; */
   align-items: flex-start;
-
+  gap: 10px;
 }
 
+.userInfo p:nth-child(1) {
+  color: #fff;
+  font-size: 26px;
+}
+
+.githubNick {
+color: #8784a5;
+font-size: 20px;
+}
+
+.githubNick::before {
+  content: url(../../../assets/images/icon-github.svg);
+  display: inline-block;
+  vertical-align: middle;
+margin-right: 6px;
+}
 .itemThree {
     grid-column: 2 / 3; /* Druhý column */
     grid-row: 1 / 3; /* Rozprestrie sa cez oba rows */
-  
   height: 100%;
-
-  border: red 1px solid;
+  /* border: red 1px solid; */
   border-radius: 8px;
+  display: flex;
+  align-items: center ;
+  justify-content: center ;
 }
+
 
 .generatedNumber {
   font-family: "Inconsolata", monospace;
   color: #8784a5;
-  -webkit-text-stroke: 0.5px black;
   writing-mode: vertical-lr;
 
 }

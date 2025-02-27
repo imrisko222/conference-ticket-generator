@@ -25,8 +25,8 @@ const GeneratedTicket = () => {
       <div className={`${style.box} ${style.itemTwo}`}>
         <img src={Avatar} alt="Conference attendees photo" />
          <div className={style.userInfo}>
-          <p>Name</p>
-          <p>Link for github</p>
+          <p>Jonatan Kristof</p>
+          <p className={style.githubNick}>Link for github</p>
          </div>
       </div>
       <div className={`${style.box} ${style.itemThree}`}>
