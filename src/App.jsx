@@ -7,10 +7,10 @@ import "./App.css";
 function App() {
   return (
     <section className="appContainer">
-      {/* <Header />
+      <Header />
       <HeroSection />
-      <Form /> */}
-      <TicketComponent />
+      <Form />
+      {/* <TicketComponent /> */}
     </section>
   );
 }

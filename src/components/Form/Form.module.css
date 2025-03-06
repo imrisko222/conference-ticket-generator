@@ -1,69 +1,101 @@
 .formContainer {
-    display: flex;
-    flex-direction: column;
-    color: red;
-}
-
-.labelStyle {
-    text-align: left;
-    color: #fff;
-font-weight: 300;
-font-family: 'Inconsolata', monospace;
-margin-bottom: 8px;
-}
-
-.inputStyle {
-    border-radius: 7px;
-    padding: 13px 9px;
-    min-width: 400px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.1);
-    color: beige;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .inputFileContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.smallInformation {
+  color: white;
+  text-align: left;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+p.smallInformation:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+p.smallInformation:nth-of-type(2)::before {
+  content: url(../../assets/images/icon-info.svg);
+  margin-right: 5px;
+}
+
+/* labelStyle je na zabezpecenie vsetkych labelov */
+.labelStyle {
+  text-align: left;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Inconsolata", monospace;
+  margin-bottom: 8px;
+  width: 100%;
 }
 
 .fileStyle {
-    background-color: green;
-padding: 50px 20px;
-border-radius: 7px;
-border: 1px dashed rgba(255, 255, 255, 0.3);
-background-color: rgba(255, 255, 255, 0.1);
-margin-bottom: 15px;
-color: #fff;
-font-family: 'Inconsolata', monospace;
-font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  width: 100%;
+  padding: 50px 20px;
+
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 7px;
 }
 
-.fileStyle:hover, .inputStyle:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-
+.fileStyle:hover,
+.inputStyle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 
-.fileStyle:focus, .inputStyle:focus {
-outline: 1.5px solid rgba(255, 255, 255, 0.5);
-outline-offset: 2px;
+.fileStyle:focus,
+.inputStyle:focus {
+  outline: 1.5px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
 }
-
 
 .uploadIcon {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 7px;
-    padding: 5px;
-    margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
-input[type='file'] {
-    display: none;
+.uploadIcon:hover {
+  border: 1px solid white;
+}
+
+.inputStyle {
+  border-radius: 7px;
+  padding: 13px 9px;
+  min-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: beige;
+  margin-bottom: 15px;
+}
+
+.fileInput {
+  display: none;
+  cursor: pointer;
 }
 
 .buttonSubmit {
-    color: #000;
-    background-color: hsl(7, 88%, 67%);
-    font-family: Inconsolata, monospace;
+  color: #000;
+  background-color: hsl(7, 88%, 67%);
+  font-family: Inconsolata, monospace;
 }
