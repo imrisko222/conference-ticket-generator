@@ -1,21 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./Form.module.css";
 
 const Form = () => {
+  const [preview, setPreview] = useState();
+
   const submitHandler = (e) => {
     e.preventDefault();
   };
   return (
     <form onSubmit={submitHandler} className={styles.formContainer}>
       {/* ZACIATOK INPUT FILE */}
-      {/* nasledujuci div sa venuje uploadovaniu, po nastylizovani zmazat */}
+      {/* nasledujuci div sa venuje uploadovaniu */}
       <div className={styles.inputFileContainer}>
         <p className={styles.smallInformation}>Upload Avatar</p>
-        {/* --- TODO 
-                1. text upload avatar dat do spanu.
-                2. nastylovat tak, aby to vyzeralo ako momentalne.
-                3. uzatvaraci tag labelu presunut za spanovy uzatvaraci tag.
-                */}
         <label className={styles.labelStyle} htmlFor="uploadInput">
           <span className={styles.fileStyle}>
             <svg
@@ -45,7 +43,8 @@ const Form = () => {
             type="file"
             className={styles.fileInput}
             id="uploadInput"
-            accept=".jpg, .png"
+            accept="image/jpeg, image/png"
+            name="avatar"
             placeholder="Drag and drop or click to upload"
           />
         </label>
@@ -58,7 +57,12 @@ const Form = () => {
       <label htmlFor="fullName" className={styles.labelStyle}>
         Full Name
       </label>
-      <input type="text" id="fullName" className={styles.inputStyle} />
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        className={styles.inputStyle}
+      />
 
       <label htmlFor="emailAddress" className={styles.labelStyle}>
         Email Address
@@ -66,6 +70,7 @@ const Form = () => {
       <input
         type="email"
         id="emailAddress"
+        name="email"
         className={styles.inputStyle}
         required
         placeholder="example@email.com"
@@ -77,6 +82,7 @@ const Form = () => {
       <input
         type="text"
         id="userName"
+        name="userName"
         className={styles.inputStyle}
         placeholder="@yournick"
       />
