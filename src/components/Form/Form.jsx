@@ -1,9 +1,10 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import styles from "./Form.module.css";
+import FileUpload from "../InputUpload/FileUpload";
 
 const Form = () => {
-  const [preview, setPreview] = useState();
+  // const [preview, setPreview] = useState();
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -15,7 +16,9 @@ const Form = () => {
       <div className={styles.inputFileContainer}>
         <p className={styles.smallInformation}>Upload Avatar</p>
         <label className={styles.labelStyle} htmlFor="uploadInput">
-          <span className={styles.fileStyle}>
+          {/* POKUS S PODMIENECNYM RENDEROVANIM KOMPONENTY */}
+          <FileUpload />
+          {/* <span className={styles.fileStyle}>
             <svg
               className={styles.uploadIcon}
               xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +49,7 @@ const Form = () => {
             accept="image/jpeg, image/png"
             name="avatar"
             placeholder="Drag and drop or click to upload"
-          />
+          /> */}
         </label>
         <p className={styles.smallInformation}>
           Upload your photo (JPG or PNG, max size: 5MB).
