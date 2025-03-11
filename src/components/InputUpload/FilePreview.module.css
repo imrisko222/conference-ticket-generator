@@ -1,0 +1,44 @@
+.componentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 50px 20px;
+  /* TODO treba nastylovat container aby vyzeral tak,
+   ako file input, ked je bez obrazka */
+  background-color: rgba(255, 255, 255, 0.1);
+
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 7px;
+}
+
+.componentContainer > img {
+  width: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 7px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.buttonContainer > button {
+  font-family: "Inconsolata", monospace;
+  font-size: 12px;
+  fill: #d1d0d5;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-bottom: 5px;
+}
+
+.buttonContainer > button:hover {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: underline;
+}

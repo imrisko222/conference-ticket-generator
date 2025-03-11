@@ -1,0 +1,48 @@
+.fileStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  width: 100%;
+  padding: 50px 20px;
+
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 7px;
+}
+
+.fileStyle:hover,
+.inputStyle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.fileStyle:focus,
+.inputStyle:focus {
+  outline: 1.5px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.uploadIcon {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.uploadIcon:hover {
+  border: 1px solid white;
+}
+
+.fileInput {
+  display: none;
+  cursor: pointer;
+}
+
+.buttonSubmit {
+  color: #000;
+  background-color: hsl(7, 88%, 67%);
+  font-family: Inconsolata, monospace;
+}

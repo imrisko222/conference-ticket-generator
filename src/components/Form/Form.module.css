@@ -97,5 +97,5 @@ p.smallInformation:nth-of-type(2)::before {
 .buttonSubmit {
   color: #000;
   background-color: hsl(7, 88%, 67%);
-  font-family: Inconsolata, monospace;
+  font-family: "Inconsolata", monospace;
 }
