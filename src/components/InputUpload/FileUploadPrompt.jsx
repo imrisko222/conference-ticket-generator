@@ -1,7 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./FileUploadPrompt.module.css";
 
-const FileUploadPrompt = () => {
+const FileUploadPrompt = ({ onFileSelect }) => {
+  // const [file, setFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+
+    if (file) {
+      onFileSelect(file);
+    }
+    console.log(file.size);
+  };
+
   return (
     <div>
       <span className={styles.fileStyle}>
@@ -34,6 +46,7 @@ const FileUploadPrompt = () => {
         id="uploadInput"
         accept="image/jpeg, image/png"
         name="avatar"
+        onChange={handleFileChange}
         placeholder="Drag and drop or click to upload"
       />
     </div>
