@@ -17,7 +17,10 @@ const FileUpload = () => {
   return (
     <>
       {uploadedPhoto ? (
-        <FilePreview onRemove={setUploadedPhoto} />
+        <FilePreview
+          userPhoto={uploadedPhoto}
+          onRemovePhoto={setUploadedPhoto}
+        />
       ) : (
         <FileUploadPrompt onFileSelect={setUploadedPhoto} />
       )}

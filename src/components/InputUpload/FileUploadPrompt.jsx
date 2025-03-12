@@ -9,9 +9,12 @@ const FileUploadPrompt = ({ onFileSelect }) => {
     const file = event.target.files[0];
 
     if (file) {
-      onFileSelect(file);
+      const fileUrl = URL.createObjectURL(file);
+      onFileSelect(fileUrl);
+
+      // automaticke uvolnenie URL pri dalsom nahrati noveho obrazka
+      return () => URL.revokeObjectURL(fileUrl);
     }
-    console.log(file.size);
   };
 
   return (

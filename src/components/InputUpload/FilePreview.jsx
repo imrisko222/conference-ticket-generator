@@ -1,30 +1,45 @@
-import React from "react";
-import ImageAvatar from "../../assets/images/image-avatar.JPG";
+import React, { useRef } from "react";
+// import ImageAvatar from "../../assets/images/image-avatar.JPG";
 import styles from "./FilePreview.module.css";
 
-const FilePreview = ({ onRemove }) => {
-  // TODO
-  // 1. po removenuti obrazka sa objavuje okno s uploadnutim obrazka. vyrieseit to.
+const FilePreview = ({ userPhoto, onRemovePhoto }) => {
+  const fileInputRef = useRef(null);
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+
+    if (file) {
+      const fileUrl = URL.createObjectURL(file);
+      onRemovePhoto(fileUrl);
+
+      return () => URL.revokeObjectURL(fileUrl);
+    }
+  };
+
   const removePhotoHandler = (event) => {
-    onRemove(null);
+    event.preventDefault();
+    event.stopPropagation();
+    onRemovePhoto(null);
+
+    if (userPhoto) {
+      URL.revokeObjectURL(userPhoto);
+    }
   };
 
   return (
     <div className={styles.componentContainer}>
-      <img src={ImageAvatar} alt="image of avatar" />
+      <img src={userPhoto} alt="User profile avatar" />
       <div className={styles.buttonContainer}>
         <button type="button" onClick={removePhotoHandler}>
           Remove image
         </button>
-        <button
-          type="button"
-          onClick={() => document.getElementById("sad")?.click()}
-        >
+        <button type="button" onClick={() => fileInputRef.current?.click()}>
           Change image
         </button>
         <input
           type="file"
-          id="sad"
+          ref={fileInputRef}
+          onChange={handleFileChange}
           className={styles.changeFile}
           accept="image/jpeg, image/png"
         />
