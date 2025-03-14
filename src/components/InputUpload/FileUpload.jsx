@@ -3,16 +3,11 @@ import { useState } from "react";
 import FilePreview from "./FilePreview";
 import FileUploadPrompt from "./FileUploadPrompt";
 
-const FileUpload = () => {
+const FileUpload = ({ premenovaneOnFileSelect }) => {
   const [uploadedPhoto, setUploadedPhoto] = useState(null);
 
-  // const file¬Handler = (event) => {
-  //   const file = event.target.files[0]
-
-  //   if (file) {
-
-  //   }
-  // }
+  // TODO:
+  // 1. dat vhodny nazov pre 'premenovaneOnFileSelect'
 
   return (
     <>
@@ -22,7 +17,10 @@ const FileUpload = () => {
           onRemovePhoto={setUploadedPhoto}
         />
       ) : (
-        <FileUploadPrompt onFileSelect={setUploadedPhoto} />
+        <FileUploadPrompt
+          onFileSelect={setUploadedPhoto}
+          premenovaneOnFileSelect={premenovaneOnFileSelect}
+        />
       )}
     </>
   );

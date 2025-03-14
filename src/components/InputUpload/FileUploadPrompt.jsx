@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "./FileUploadPrompt.module.css";
 
-const FileUploadPrompt = ({ onFileSelect }) => {
+const FileUploadPrompt = ({ onFileSelect, premenovaneOnFileSelect }) => {
   // const [file, setFile] = useState(null);
 
   const handleFileChange = (event) => {
@@ -11,6 +11,7 @@ const FileUploadPrompt = ({ onFileSelect }) => {
     if (file) {
       const fileUrl = URL.createObjectURL(file);
       onFileSelect(fileUrl);
+      premenovaneOnFileSelect(fileUrl);
 
       // automaticke uvolnenie URL pri dalsom nahrati noveho obrazka
       return () => URL.revokeObjectURL(fileUrl);

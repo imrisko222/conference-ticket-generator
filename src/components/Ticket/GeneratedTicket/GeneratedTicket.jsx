@@ -5,7 +5,7 @@ import Icon from "../../../assets/images/logo-mark.svg";
 import Avatar from "../../../assets/images/image-avatar.jpg";
 import Ticket from "../../../assets/images/ticket_bg.svg";
 
-const GeneratedTicket = () => {
+const GeneratedTicket = ({ sendedFormData }) => {
   const generatedNumber = () => {
     const randomNumber = Math.floor(10000 + Math.random() * 90000); // generuje číslo od 10000 do 99999
     return `#${randomNumber}`;
@@ -20,14 +20,14 @@ const GeneratedTicket = () => {
         <div className={style.conferenceDetails}>
           <p>Coding Conf</p>
           <p>Jan 31, 2025 / Offline</p>
-        </div>        
+        </div>
       </div>
       <div className={`${style.box} ${style.itemTwo}`}>
-        <img src={Avatar} alt="Conference attendees photo" />
-         <div className={style.userInfo}>
-          <p>Jonatan Kristof</p>
-          <p className={style.githubNick}>Link for github</p>
-         </div>
+        <img src={sendedFormData.file} alt="Conference attendees photo" />
+        <div className={style.userInfo}>
+          <p>{sendedFormData.fullName}</p>
+          <p className={style.githubNick}>{sendedFormData.userName}</p>
+        </div>
       </div>
       <div className={`${style.box} ${style.itemThree}`}>
         <p className={style.generatedNumber}>{ticketNumber}</p>
