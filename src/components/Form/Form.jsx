@@ -14,7 +14,6 @@ const Form = ({ onSetFormData }) => {
   const submitHandler = (event) => {
     event.preventDefault();
     onSetFormData(formData);
-    console.log("odoslane udaje:", formData);
   };
 
   // Aktualizacia textovych inputov
